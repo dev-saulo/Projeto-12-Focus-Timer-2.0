@@ -77,6 +77,7 @@ body {
 }
 
 #controls {
+    display: flex;
     margin-top: 1.7rem;
     gap: 4rem;
 }
@@ -95,7 +96,6 @@ button {
 
 /*Controles*/
 .running .ph-play-circle,
-.running .ph-timer,
 html:not(.running) .ph-pause-circle {
     display: none;
 }
@@ -112,7 +112,7 @@ html:not(.running) .ph-pause-circle {
     text-align: center;
 }
 
-.container {
+#container {
     display: grid;
     grid-template-rows: auto auto; /* Duas linhas de altura automática */
     grid-template-columns: 1fr 1fr; /* Duas colunas com largura igual */
@@ -134,8 +134,11 @@ html:not(.running) .ph-pause-circle {
     transition: transform .5s;
 }
 
-.container .btn:hover {
+#container .btn:hover {
     transform: scale(1.1);
+
+    background: var(--controls-bg-color);
+    cursor: pointer;
 }
 
 @media (max-width: 950px) {
@@ -149,7 +152,7 @@ html:not(.running) .ph-pause-circle {
         display: flex;
         flex-direction: column;
     }
-    .container {
+    #container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, auto);
@@ -157,28 +160,5 @@ html:not(.running) .ph-pause-circle {
         margin: auto; /* Centraliza o grid na tela */
         justify-content: center; /* Centraliza horizontalmente o conteúdo do grid */
         align-items: center; /* Centraliza verticalmente o conteúdo do grid */        
-    }
-
-    @media (max-width: 540px) {
-        .wrapper {
-            display: flex;
-            flex-direction: column;
-            gap: 5rem; /* Espaço entre as colunas */
-        }
-    
-        #controls {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: repeat(3, auto);
-        }
-        .container {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(2, auto);
-            gap: 3rem; /* Espaçamento entre as células do grid */
-            margin: auto; /* Centraliza o grid na tela */
-            justify-content: center; /* Centraliza horizontalmente o conteúdo do grid */
-            align-items: center; /* Centraliza verticalmente o conteúdo do grid */        
-        }
-    }
+    }    
 }

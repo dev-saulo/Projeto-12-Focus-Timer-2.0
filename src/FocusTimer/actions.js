@@ -17,17 +17,42 @@ export function reset() {
     sounds.buttonPressAudio.play()
 }
 
-export function set() {
-    elements.minutes.setAttribute('contenteditable', true)
-    elements.minutes.focus()
-}
-
-export function toggleMusic() {
+export function toggleMusicFloresta() {
     state.isMute = document.documentElement.classList.toggle('music-on')
 
     if(state.isMute) {
-        sounds.bgFloresta.play()
+        sounds.buttonPressAudioFloresta.play()
         return
     }
-    sounds.bgFloresta.pause()
+    sounds.buttonPressAudioFloresta.pause()
+}
+
+export function toggleMusicChuva() {
+    state.isMute = document.documentElement.classList.toggle('music-on')
+
+    if(state.isMute) {
+        sounds.buttonPressAudioChuva.play()
+        return
+    }
+    sounds.buttonPressAudioChuva.pause()
+}
+
+export function toggleMusicCafeteria() {
+    state.isMute = document.documentElement.classList.toggle('music-on')
+
+    if(state.isMute) {
+        sounds.buttonPressAudioCafeteria.play()
+        return
+    }
+    sounds.buttonPressAudioCafeteria.pause()
+}
+
+export function toggleMusicLareira() {
+    state.isMute = document.documentElement.classList.toggle('music-on')
+
+    if(state.isMute) {
+        sounds.buttonPressAudioLareira.play()
+        return
+    }
+    sounds.buttonPressAudioLareira.pause()
 }

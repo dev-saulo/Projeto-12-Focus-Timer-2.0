@@ -32,5 +32,5 @@ export function setMinutes() {
 
         updateDisplay()
         elements.minutes.removeAttribute('contenteditable')
-    })
+    })    
 }

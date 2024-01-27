@@ -20,7 +20,7 @@
         </button>
 
         <div class="wrapper">
-            <div class="main">
+            <div>
                 <section id="timer" class="flex">
                     <span id="minutes">25</span>
                     <span>:</span>
@@ -30,18 +30,18 @@
                 <section id="controls" class="flex">
                     <button data-action="toggleRunning" class="ph ph-play-circle"><span class="sr-only">Iniciar contador</span></button>
                     <button data-action="toggleRunning" class="ph-light ph-pause-circle secondary"><span class="sr-only">Pausar contador</span></button>
-                    <button data-action="reset" class="ph ph-stop-circle"><span class="sr-only">Parar contador</span></button>
-                    <button data-action="set" class="ph ph-timer"><span class="sr-only">Ajustar contador</span></button>
+                    <button data-action="reset" class="ph ph-stop-circle"><span class="sr-only">Parar contador</span></button>                    
                     <button data-action="toogleTime" class="ph-light ph-plus-circle"><span class="sr-only">Aumentar timer</span></button>
                     <button data-action="toggleTime" class="ph-light ph-minus-circle"><span class="sr-only">Diminuir time</span></button>
+
                 </section>
             </div>
-            <div class="container">
-                <div class="btn"><button data-action="toggleMusic" class="ph-light ph-tree"><span class="sr-only">Som de floresta</span></button></div>
-                <div class="btn"><button data-action="toggleMusic" class="ph-light ph-cloud-rain"><span class="sr-only">Som de chuva</span></button></div>
-                <div class="btn"><button data-action="toggleMusic" class="ph-light ph-coffee"><span class="sr-only">Som de cafeteria</span></button></div>
-                <div class="btn"><button data-action="toggleMusic" class="ph-light ph-flame"><span class="sr-only">Som de lareira</span></button></div>
-            </div>
+            <section id="container">
+                <div class="btn"><button data-action="toggleMusicFloresta" class="ph-light ph-tree"><span class="sr-only">Som de floresta</span></button></div>
+                <div class="btn"><button data-action="toggleMusicChuva" class="ph-light ph-cloud-rain"><span class="sr-only">Som de chuva</span></button></div>
+                <div class="btn"><button data-action="toggleMusicCafeteria" class="ph-light ph-coffee"><span class="sr-only">Som de cafeteria</span></button></div>
+                <div class="btn"><button data-action="toggleMusicLareira" class="ph-light ph-flame"><span class="sr-only">Som de lareira</span></button></div>
+            </section>
         </div>
     </div>
 </body>
