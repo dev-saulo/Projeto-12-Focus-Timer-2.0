@@ -8,6 +8,7 @@
     --bg-color: hsla(0, 0%, 100%, 1);
     --text-color: hsla(240, 6%, 21%, 1);
     --button-primary: hsla(240, 9%, 89%, 1);
+    --button-secondary: hsl(194, 97%, 31%, 1);
     --controls-bg-color: hsla(194, 97%, 31%, 1);
     
     font-size: clamp(40%, 1% + 2vh, 62.5%);
@@ -20,8 +21,8 @@ html.light {
     --button-primary: hsl(324, 6%, 17%);
 }
 
-html.light .ph-sun,
-html:not(.light) .ph-moon {
+html.light .ph-moon,
+html:not(.light) .ph-sun {
     display: none;
 }
 
@@ -88,6 +89,17 @@ button {
     font-size: 6.4rem;
 }
 
+.secondary {
+    color: var(--button-secondary);
+}
+
+/*Controles*/
+.running .ph-play-circle,
+.running .ph-timer,
+html:not(.running) .ph-pause-circle {
+    display: none;
+}
+
 .wrapper {
     display: flex;
     justify-content: center;
@@ -119,4 +131,54 @@ button {
     width: 13.8rem;
     height: 15.2rem;
     cursor: pointer;
+    transition: transform .5s;
+}
+
+.container .btn:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 950px) {
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 5rem; /* Espaço entre as colunas */
+    }
+
+    .main {
+        display: flex;
+        flex-direction: column;
+    }
+    .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
+        gap: 3rem; /* Espaçamento entre as células do grid */
+        margin: auto; /* Centraliza o grid na tela */
+        justify-content: center; /* Centraliza horizontalmente o conteúdo do grid */
+        align-items: center; /* Centraliza verticalmente o conteúdo do grid */        
+    }
+
+    @media (max-width: 540px) {
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 5rem; /* Espaço entre as colunas */
+        }
+    
+        #controls {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, auto);
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, auto);
+            gap: 3rem; /* Espaçamento entre as células do grid */
+            margin: auto; /* Centraliza o grid na tela */
+            justify-content: center; /* Centraliza horizontalmente o conteúdo do grid */
+            align-items: center; /* Centraliza verticalmente o conteúdo do grid */        
+        }
+    }
 }
